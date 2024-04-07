@@ -1,15 +1,15 @@
-package mainMenu;
+package Menus;
 
 import Commands.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class mainMenu {
+public class MainMenu {
     private final Map<String, Command> menuOptions = new HashMap<>();
     private final Scanner scanner;
 
-    public mainMenu() {
+    public MainMenu() {
         scanner = new Scanner(System.in);
         menuOptions.put("1", new ImportCommand());
         menuOptions.put("2", new ShowtablesCommand());
@@ -38,16 +38,17 @@ public class mainMenu {
     }
 
     private void displayMenu() {
-        System.out.println("import <file name>");
-        System.out.println("showtables");
-        System.out.println("describe <name>");
-        System.out.println("print <name>");
-        System.out.println("export <name> <file name>");
-        System.out.println("select <column-n> <value> <table name>");
-        System.out.println("addcolumn <table name> <column name> <column type>");
-        System.out.print("update <table name> <search column n> <search value> <target column n> <target value>");
-        System.out.println("delete <table name> <search column n> <search value>");
-        System.out.println("insert <table name> <column 1> ... <column n>");
-        System.out.println("innerjoin <table 1> <column n1> <table 2> <column n2>");
+        System.out.println("1. import <file name>");
+        System.out.println("2. showtables");
+        System.out.println("3. describe <name>");
+        System.out.println("4. print <name>");
+        System.out.println("5. export <name> <file name>");
+        System.out.println("6. select <column-n> <value> <table name>");
+        System.out.println("7. addcolumn <table name> <column name> <column type>");
+        System.out.print("8. update <table name> <search column n> <search value> <target column n> <target value>");
+        System.out.println("9. delete <table name> <search column n> <search value>");
+        System.out.println("10. insert <table name> <column 1> ... <column n>");
+        System.out.println("11. innerjoin <table 1> <column n1> <table 2> <column n2>");
+        System.out.println("Please select your choice:");
     }
 }
